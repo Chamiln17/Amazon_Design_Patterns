@@ -1,6 +1,5 @@
 
 
-// Classe PayPal.java
 class PayPal {
     public void connecter() {
         System.out.println("Connexion à PayPal.");
@@ -18,13 +17,12 @@ class PayPal {
         System.out.println("Remboursement de $" + montant + " via PayPal.");
     }
 }
-// Interface PaymentAmazon.java
 interface PaymentAmazon {
     void autoriserPaiement(double montant);
     void capturerPaiement(double montant);
     void rembourserPaiement(double montant);
 }
-// Classe StripeAdapter.java
+// adapter
 class StripeAdapter implements PaymentAmazon {
     private Stripe stripe;
 
@@ -49,7 +47,7 @@ class StripeAdapter implements PaymentAmazon {
     }
 }
 
-// Classe PayPalAdapter.java
+// adapter
 class PayPalAdapter implements PaymentAmazon {
     private PayPal paypal;
 
@@ -74,7 +72,6 @@ class PayPalAdapter implements PaymentAmazon {
     }
 }
 
-// Classe Stripe.java
 class Stripe {
     public void initialiser() {
         System.out.println("Initialisation de Stripe.");
@@ -93,7 +90,6 @@ class Stripe {
     }
 }
 
-// Classe ServicePayment.java
 class ServicePayment {
     private PaymentAmazon processeurDePaiement;
 
@@ -116,7 +112,6 @@ class ServicePayment {
 // Classe Main.java
 class Main {
     public static void main(String[] args) {
-        // Utilisation de PayPal
         PayPal paypal = new PayPal();
         PaymentAmazon adaptateurPayPal = new PayPalAdapter(paypal);
 
@@ -124,7 +119,6 @@ class Main {
         servicePaiementPayPal.traiterPaiement(100.0);
         servicePaiementPayPal.traiterRemboursement(50.0);
 
-        // Utilisation de Stripe
         Stripe stripe = new Stripe();
         PaymentAmazon adaptateurStripe = new StripeAdapter(stripe);
 

@@ -126,10 +126,8 @@ public class Main {
     public static void main(String[] args) {
         SearchEngineFacade searchEngine = new SearchEngineFacade();
 
-        // Example: Update the index
         searchEngine.updateIndex(Arrays.asList(new Product("Laptop"), new Product("Smartphone")));
 
-        // Example: Perform a search
         List<Product> results = searchEngine.search("best smartphone", "user123");
 
         System.out.println("Search results:");
@@ -137,7 +135,6 @@ public class Main {
             System.out.println(product.getName());
         }
 
-        // Example: Get analytics report
         AnalyticsReport report = searchEngine.getAnalyticsReport();
     }
 }
