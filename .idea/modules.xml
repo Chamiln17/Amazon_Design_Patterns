@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Amazon_Design_Patterns.iml" filepath="$PROJECT_DIR$/Amazon_Design_Patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/Amazon_shopping_decorator/Amazon_shopping_decorator.iml" filepath="$PROJECT_DIR$/Amazon_shopping_decorator/Amazon_shopping_decorator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Facade_pattern/Facade_pattern.iml" filepath="$PROJECT_DIR$/Facade_pattern/Facade_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebMiddlewares/WebMiddlewares.iml" filepath="$PROJECT_DIR$/WebMiddlewares/WebMiddlewares.iml" />
     </modules>
   </component>
 </project>
